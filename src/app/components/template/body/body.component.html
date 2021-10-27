@@ -1,0 +1,21 @@
+<main>
+   <section class="infoPessoal">
+    <h1>Bem vindo [user].</h1>
+    <h2>Saldo atual: [saldo]</h2>
+    <span></span>
+   </section>
+    <section class="servicos">
+        <div>
+            <form action="post" #frm="ngForm" (ngSubmit)="depositar(depositar)">
+                <label for="depositar">Depositar:</label>
+                <input type="number" name="depositar" id="depositar">
+                <button type="submit" [disabled]="frm.invalid">depositar</button>
+            </form>
+            <form action="post" #frm="ngForm" (ngSubmit)="sacar(sacar)">
+                <label for="sacar">Sacar:</label>
+                <input type="number" name="sacar" id="sacar">
+                <button type="submit" [disabled]="frm.invalid">sacar</button>
+            </form>
+        </div>
+    </section>
+</main>
